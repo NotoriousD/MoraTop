@@ -191,15 +191,14 @@ b, strong {
 		justify-content: center;
 		text-decoration: none;
 		transition: all .3s ease;
-		border: 1px solid #fff;
 		&:hover{
 			border: 1px solid #fff;
 			text-decoration: none;
 			color: #ffffff;
 		}
 	}
-	a{
-		
+	a.active{
+		border: 1px solid #ffffff;
 	}
 }
 
@@ -425,7 +424,9 @@ body .country-selector.weglot-inline li{
 		color: $main;
 	}
 }
-
+.banner-mob-fig{
+	display: none;
+}
 .banner__figure{
 	position: absolute;
 	z-index: 0;
@@ -594,6 +595,7 @@ body .country-selector.weglot-inline li{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	overflow-x: hidden;
 	&:first-child{
 		margin-bottom: 300px;
 	}
@@ -981,7 +983,7 @@ body .country-selector.weglot-inline li{
 		tr{
 			td{
 				padding: 15px;
-				background-color: #EFF4F7;
+				background-color: #ededed;
 				font-size: 14px;
 				font-weight: 700;
 				line-height: 17px;
@@ -999,7 +1001,7 @@ body .country-selector.weglot-inline li{
 		tr{
 			td{
 				background-color: #ffffff;
-				border: 1px solid #EFF4F7;
+				border: 1px solid #ededed;
 				padding: 15px;
 				text-align: center;
 				font-size: 12px;
@@ -1078,7 +1080,7 @@ body .country-selector.weglot-inline li{
 
 .slider__container,
 .slider__container2{
-	background: linear-gradient(180deg, #EFF4F7 0%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(180deg, #ededed 0%, rgba(255, 255, 255, 0) 100%);
 	padding: 0 150px;
 	padding-top: 163px;
 	padding-bottom: 200px;
@@ -1460,7 +1462,7 @@ body .country-selector.weglot-inline li{
 }
 
 .complect__container{
-	background: linear-gradient(180deg, #EFF4F7 0%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(180deg, #EDEDED 0%, rgba(255, 255, 255, 0) 100%);
 	padding-left: 300px;
 	padding-right: 250px;
 	display: flex;
@@ -2455,6 +2457,10 @@ body .country-selector.weglot-inline li{
 
 /*Mini*/
 
+.boiler__mini{
+	margin-top: 300px;
+}
+
 .spec__btns{
 	a{
 		border-radius: 2px;
@@ -2720,10 +2726,11 @@ body .country-selector.weglot-inline li{
 /*THANK*/
 
 .thank__container{
-	background-image: url(../img/thank.png);
+	background-image: url(../img/thank-bg.png);
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center right;
+	background-position: center center;
+	background-size: 100%;
+	background-color: #DE4E45;
 }
 
 .thank-page{
@@ -2731,7 +2738,6 @@ body .country-selector.weglot-inline li{
 }
 
 .thank__content{
-	background: linear-gradient(89.64deg, #DE4E45 0.14%, rgba(222, 78, 69, 0.33) 100.36%);
 	padding: 0 150px;
 	padding-top: 290px;
 	padding-bottom: 345px;

@@ -1,9 +1,6 @@
 @import "_mixins/font-face";
 
 @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Bold", 700);
-@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-ExtraBold", 800);
 @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-ExtraLight", 100);
-@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Light", 200);
 @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Medium", 500);
 @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Regular", 400);
-@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-SemiBold", 600);

@@ -1,0 +1,284 @@
+@import "vars";
+
+.c-contacts{
+	margin-bottom: 53px;
+}
+
+.map-container{
+	position: relative;
+	max-width: 60%;
+	width: 100%;
+	.map{
+		filter: drop-shadow(0px 4px 40px rgba(137, 137, 137, 0.15));
+		width: 995px;
+		height: 668px;
+	}
+}
+
+.tab-pad{
+	display: none;
+	position: relative;
+	justify-content: center;
+	height: 340px;
+	.tab{
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.open-tab{
+	position: absolute;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	color: #848484;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	z-index: 1;
+	svg{
+		transition: all 0.2s ease;
+	}
+	span{
+		position: absolute;
+		transition: all 0.2s ease;
+		z-index: 10;
+		&:before{
+			content: '';
+			position: absolute;
+			transition: all 0.2s ease;
+			left: -10px;
+			top: 4px;
+			width: 6px;
+			height: 6px;
+			background-color: #848484;
+			border-radius: 100%;
+			transition: all 0.2s ease;
+		}
+	}
+	&:hover{
+		span{
+			color: #000;
+			text-decoration: none;
+			font-size: 18px;
+			z-index: 2;
+			&:before{
+				background-color: #000000;
+			}
+		}
+		svg{
+			filter: drop-shadow(3px 7px 10px rgba(233,81,15, 0.15));
+		}
+	}
+}
+
+.open-Kyiv{
+	top: 11.7%;
+	left: 39.1%;
+	color: #000000;
+	font-size: 18px;
+	&:before{
+		background-color: #000;
+	}
+	span{
+		left: 39.6%;
+		top: 52%;
+	}
+}
+
+.open-Lviv{
+	left: 2.9%;
+	top: 22.6%;
+	span{
+		left: 53%;
+		top: 39%;
+	}
+}
+
+.open-Ivano{
+	left: 7.8%;
+	top: 37%;
+	span{
+		left: 61%;
+		top: 56%;
+		width: 200px;
+	}
+}
+
+.open-Vinni{
+	left: 28.7%;
+	top: 32.5%;
+	span{
+		left: 44%;
+		top: 35%;
+	}
+}
+
+.open-Hmeln{
+	left: 22.1%;
+	top: 23.4%;
+	span{
+		left: 46%;
+		top: 35%;
+	}
+}
+
+.open-Odessa{
+	top: 53%;
+	left: 33.2%;
+	span{
+		left: 66%;
+		top: 35%;
+	}
+}
+
+.open-Dnipro{
+	left: 59.4%;
+	top: 40%;
+	span{
+		left: 41%;
+		top: 47%;
+	}
+}
+
+.open-Khark{
+	left: 69.6%;
+	top: 25.4%;
+	span{
+		left: 55%;
+		top: 35%;
+	}
+}
+
+.open-tab.open-tab-active{
+	font-size: 18px;
+	color: $main;
+	span{
+		&:before{
+			background-color: $main;
+		}
+	}
+	svg{
+		fill: #ffffff;
+	}
+}
+
+.tab-title{
+	font-size: 30px;
+	font-weight: 600;
+	color: #000;
+	line-height: 47px;
+}
+
+.tab-bogemia__logo{
+	position: absolute;
+	left: 0;
+	top: -15px;
+}
+
+.tab-container{
+	position: relative;
+	padding-top: 50px;
+	width: 36%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.contact-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: $bgc;
+	padding-top: 156px;
+	padding-left: 55px;
+	padding-bottom: 66px;
+}
+
+.map-tab{
+	width: 100%;
+	background-color: #ffffff;
+	padding-top: 64px;
+	padding-left: 160px;
+	padding-bottom: 64px;
+	position: absolute;
+	display: none;
+	transition: all 0.2s ease;
+	top: 0;
+	left: 0;
+	span{
+		display: block;
+	}
+}
+
+.map-tab.tab-active{
+	display: block;
+}
+
+.tab-list{
+	position: relative;
+	width: 100%;
+}
+
+.map-table{
+	display: none;
+	width: 100%;
+	justify-content: center;
+}
+
+.tab-name{
+	font-size: 24px;
+	font-weight: 700;
+	color: $main;
+	margin-bottom: 5px;
+	position: relative;
+	&:before{
+		position: absolute;
+		transition: all .5s ease;
+		content: '';
+		width: 68px;
+		height: 2px;
+		background: linear-gradient(270deg, #FD8787 -9.63%, rgba(255, 172, 172, 0) 98.93%);
+		left: -100px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 0;
+	}
+}
+
+.tab-addr{
+	a{
+		display: block;
+	}
+}
+
+.tab-address{
+	font-size: 24px;
+	font-weight: 100;
+}
+
+.tab-telephone{
+	font-size: 24px;
+	font-weight: 700;
+	color: #000000;
+	text-decoration: none;
+	&:hover{
+		color: #000000;
+		text-decoration: none;
+	}
+}
+
+.tab-email{
+	font-size: 24px;
+	font-weight: 100;
+	color: #000000;
+	text-decoration: none;
+	&:hover{
+		color: #000000;
+		text-decoration: none;
+	}	
+}
+
+.comfort-contact{
+	margin-bottom: 0;
+}

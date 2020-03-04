@@ -10,7 +10,7 @@ $(function () {
 		$(this).removeClass('is-active');
 		$('.main-humb').removeClass('is-active');
 		$('.toggle-mnu').removeClass("active");
-	})
+	});
 
 	var windowW = $(window).width();
 
@@ -47,7 +47,7 @@ $(function () {
 					transform: 'translate(-21px,-42px)',
 					ease: Linear.easeNone,
 				});
-				
+
 			} else if ($(window).scrollTop() > 2000) {
 				var scale_tween = TweenMax.to('#about-img', 1, {
 					transform: 'translate(0, 0)',
@@ -82,110 +82,16 @@ $(function () {
 		});
 	}
 
-	if (windowW > 1400) {
-		$(window).scroll(function () {
-			var sect = $('.c-slider');
-			var line = $('.slider__line');
-			var slider = parseInt(sect.offset().top) - 200;
-			if (slider < $(window).scrollTop()) {
-				var tops = parseInt($(window).scrollTop() - sect.offset().top);
-				tops -= 0;
-				if (tops < sect.height() - $(".slider__line").height()) {
-					if (line.css('left') == -200) {
-						$(".slider__line").css("left", -200);
-					} else {
-						$(".slider__line").css("left", -tops);
-					}
-				}
-			}
-		});
-		$(window).scroll(function () {
-			var sect = $('.c-slider2');
-			var slider = parseInt(sect.offset().top) - 200;
-			if (slider < $(window).scrollTop()) {
-				var tops = parseInt($(window).scrollTop() - sect.offset().top);
-				tops -= 0;
-				if (tops < sect.height() - $(".slider__line2").height()) {
-					$(".slider__line2").css("left", -tops);
-				}
-			}
-		});
-	} else {
-		$(window).scroll(function () {
-			var sect = $('.c-slider');
-			var slider = parseInt(sect.offset().top) - 700;
-			var left = $('.slider__line').offset().left;
-			console.log(left);
-			if (slider < $(window).scrollTop()) {
-				var tops = parseInt($(window).scrollTop() - sect.offset().top);
-				tops -= 0;
-				if (tops < sect.height() - $(".slider__line").height()) {
-					if ($('.slider__line').offset().left == -220) {
-						$(".slider__line").css("left", -220);
-					} else {
-						$(".slider__line").css("left", -tops);
-					}
-				}
-			}
-		});
-		$(window).scroll(function () {
-			var sect = $('.c-slider2');
-			var slider = parseInt(sect.offset().top) - 700;
-			if (slider < $(window).scrollTop()) {
-				var tops = parseInt($(window).scrollTop() - sect.offset().top);
-				tops -= 0;
-				if (tops < sect.height() - $(".slider__line2").height()) {
-					$(".slider__line2").css("left", -tops);
-				}
-			}
-		});
-	}
-
-	$(window).scroll(function () {
-		var sect = $('.comfort__docs');
-		var slider = parseInt(sect.offset().top) - 700;
-		if (slider < $(window).scrollTop()) {
-			var tops = parseInt($(window).scrollTop() - sect.offset().top);
-			tops -= 0;
-			if (tops < sect.height() - $(".docs__line").height()) {
-				$(".docs__line").css("left", -tops);
-			}
-		}
-	});
-
-
-
-	$(window).scroll(function () {
-		if (windowW > 1200) {
-			var sect = $('.boilers__docs');
-			var slider = parseInt(sect.offset().top) - 700;
-			if (slider < $(window).scrollTop()) {
-				var tops = parseInt($(window).scrollTop() - sect.offset().top);
-				tops -= 0;
-				if (tops < sect.height() - $(".bdocs__line").height()) {
-					$(".bdocs__line").css("left", -tops);
-				}
-			}
-		} else if (windowW < 1200) {
-			var sect = $('.boilers__docs');
-			var slider = parseInt(sect.offset().top) - 900;
-			if (slider < $(window).scrollTop()) {
-				var tops = parseInt($(window).scrollTop() - sect.offset().top);
-				tops -= 200;
-				if (tops < sect.height() - $(".bdocs__line").height()) {
-					$(".bdocs__line").css("left", tops);
-				}
-			}
-		} else if (windowW < 800) {
-			return 0;
-		}
-	});
-
-	$('.all-spec').on('click', function (e) {
+	$('.all-spec1').on('click', function (e) {
 		e.preventDefault();
-		$(this).toggleClass('active');
-		$('.table__start').toggleClass('table__active');
-		$('.table__upgrage').toggleClass('table__active');
+		$('.ts1').toggleClass('table__active');
+		$('.tu1').toggleClass('table__active');
+	});
+
+	$('.all-spec2').on('click', function (e) {
+		e.preventDefault();
+		$('.ts2').toggleClass('table__active');
+		$('.tu2').toggleClass('table__active');
 	});
 
 	$(".tab__link").on("click", function (e) {
@@ -195,12 +101,6 @@ $(function () {
 		$(id).addClass("active").siblings(".adds__tab").removeClass("active");
 	});
 
-	$(".open-tab").on("click", function (e) {
-		e.preventDefault();
-		var id = $(this).attr("href");
-		$(this).addClass("open-tab-active").siblings(".open-tab").removeClass("open-tab-active");
-		$(id).addClass("tab-active").siblings(".map-tab").removeClass("tab-active");
-	});
 
 	$('.open-popup').magnificPopup({
 		type: 'inline',
@@ -209,15 +109,6 @@ $(function () {
 
 			duration: 300, // duration of the effect, in milliseconds
 			easing: 'ease-in-out', // CSS transition easing function
-		}
-	});
-
-	$(window).scroll(function () {
-		var scrollTop = $(window).scrollTop(),
-			elementOffset = $('.comfort__delivery').offset().top,
-			distance = (elementOffset - scrollTop);
-		if (distance < 300) {
-			$('.truck').addClass('truck-active');
 		}
 	});
 
@@ -244,39 +135,16 @@ $(function () {
 			$('.scene-title2').removeClass('active');
 		}
 	});
-	$(window).scroll(function () {
-		var sect = $('.boilers__docs');
-		var slider = parseInt(sect.offset().top) - 700;
-		if (slider < $(window).scrollTop()) {
-			var tops = parseInt($(window).scrollTop() - sect.offset().top);
-			tops -= 0;
-			if (tops < sect.height() - $(".bdocs__line").height()) {
-				$(".bdocs__line").css("left", -tops);
-			}
-		}
-	});
-
-	$(window).scroll(function () {
-		var scrollTop = $(window).scrollTop(),
-			elementOffset = $('.comfort__delivery').offset().top,
-			distance = (elementOffset - scrollTop);
-		if (distance < 300) {
-			$('.truck').addClass('truck-active');
-		}
-		console.log(distance);
-	});
 
 	var hr = window.location.pathname;
-	console.log(hr);
 	var ars = hr.split('/');
 	ars.shift();
-	console.log(ars);
 
-	if(ars[0] == 'ru'){
+	if (ars[0] == 'ru') {
 		$('.lang-ru').addClass('active').siblings('.lang').removeClass('active');
 	}
 
-	if(ars[0] == 'ru'){
+	if (ars[0] == 'ru') {
 		$("#form").validate({
 			messages: {
 				username: {
@@ -318,7 +186,7 @@ $(function () {
 					}
 				});
 			}
-	
+
 		});
 		$("#form1").validate({
 			messages: {
@@ -361,7 +229,7 @@ $(function () {
 					}
 				});
 			}
-	
+
 		});
 		$("#form2").validate({
 			messages: {
@@ -404,10 +272,96 @@ $(function () {
 					}
 				});
 			}
-	
+
+		});
+		$("#form3").validate({
+			messages: {
+				username: {
+					required: "Введите Имя"
+				},
+				teleph: {
+					required: "Введите телефон"
+				},
+				teleph1: {
+					required: "Введите телефон"
+				},
+				teleph2: {
+					required: "Введите телефон"
+				},
+				teleph3: {
+					required: "Введите телефон"
+				},
+				teleph4: {
+					required: "Введите телефон"
+				},
+			},
+			submitHandler: function (form) {
+				var msg = $(form).find('input, textarea');
+				$.ajax({
+					type: 'POST',
+					url: '/mail.php',
+					data: msg,
+					success: function (data) {
+						if (data == '1') {
+							form.reset();
+							document.location.href = "http://moratop.bogemia.com/ru/dyakuyemo/";
+						} else {
+							alert("error");
+						}
+						console.log(data);
+					},
+					error: function (xhr, str) {
+						alert(xhr.responseCode);
+					}
+				});
+			}
+
+		});
+		$("#form4").validate({
+			messages: {
+				username: {
+					required: "Введите Имя"
+				},
+				teleph: {
+					required: "Введите телефон"
+				},
+				teleph1: {
+					required: "Введите телефон"
+				},
+				teleph2: {
+					required: "Введите телефон"
+				},
+				teleph3: {
+					required: "Введите телефон"
+				},
+				teleph4: {
+					required: "Введите телефон"
+				},
+			},
+			submitHandler: function (form) {
+				var msg = $(form).find('input, textarea');
+				$.ajax({
+					type: 'POST',
+					url: '/mail.php',
+					data: msg,
+					success: function (data) {
+						if (data == '1') {
+							form.reset();
+							document.location.href = "http://moratop.bogemia.com/ru/dyakuyemo/";
+						} else {
+							alert("error");
+						}
+						console.log(data);
+					},
+					error: function (xhr, str) {
+						alert(xhr.responseCode);
+					}
+				});
+			}
+
 		});
 		$.validator.messages.required = 'Заполните поле';
-	}else{
+	} else {
 		$("#form").validate({
 			messages: {
 				username: {
@@ -449,7 +403,7 @@ $(function () {
 					}
 				});
 			}
-	
+
 		});
 		$("#form1").validate({
 			messages: {
@@ -492,7 +446,7 @@ $(function () {
 					}
 				});
 			}
-	
+
 		});
 		$("#form2").validate({
 			messages: {
@@ -535,11 +489,97 @@ $(function () {
 					}
 				});
 			}
-	
+
+		});
+		$("#form3").validate({
+			messages: {
+				username: {
+					required: "Введіть Ім'я"
+				},
+				teleph: {
+					required: "Введіть телефон"
+				},
+				teleph1: {
+					required: "Введіть телефон"
+				},
+				teleph2: {
+					required: "Введіть телефон"
+				},
+				teleph3: {
+					required: "Введіть телефон"
+				},
+				teleph4: {
+					required: "Введіть телефон"
+				},
+			},
+			submitHandler: function (form) {
+				var msg = $(form).find('input, textarea');
+				$.ajax({
+					type: 'POST',
+					url: '/mail.php',
+					data: msg,
+					success: function (data) {
+						if (data == '1') {
+							form.reset();
+							document.location.href = "http://moratop.bogemia.com/dyakuyemo/";
+						} else {
+							alert("error");
+						}
+						console.log(data);
+					},
+					error: function (xhr, str) {
+						alert(xhr.responseCode);
+					}
+				});
+			}
+
+		});
+		$("#form4").validate({
+			messages: {
+				username: {
+					required: "Введіть Ім'я"
+				},
+				teleph: {
+					required: "Введіть телефон"
+				},
+				teleph1: {
+					required: "Введіть телефон"
+				},
+				teleph2: {
+					required: "Введіть телефон"
+				},
+				teleph3: {
+					required: "Введіть телефон"
+				},
+				teleph4: {
+					required: "Введіть телефон"
+				},
+			},
+			submitHandler: function (form) {
+				var msg = $(form).find('input, textarea');
+				$.ajax({
+					type: 'POST',
+					url: '/mail.php',
+					data: msg,
+					success: function (data) {
+						if (data == '1') {
+							form.reset();
+							document.location.href = "http://moratop.bogemia.com/dyakuyemo/";
+						} else {
+							alert("error");
+						}
+						console.log(data);
+					},
+					error: function (xhr, str) {
+						alert(xhr.responseCode);
+					}
+				});
+			}
+
 		});
 	}
 
-	$(document).mouseup(function (e){ // событие клика по веб-документу
+	$(document).mouseup(function (e) { // событие клика по веб-документу
 		var div = $(".toggle-mnu"); // тут указываем ID элемента
 		if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
 			$(this).removeClass('is-active');
@@ -548,11 +588,62 @@ $(function () {
 		}
 	});
 
-	var wh  = $(window).height();
+	var wh = $(window).height();
 
-	if(wh <= 768){
+	if (wh <= 768) {
 		$('.toggle-mnu__top').addClass('lang-13d');
 		$('.toggle-mnu__nav').addClass('nav-13d');
 	}
+
+
+
+	$("#teleph").mask("+380 (99) 99-99-999");
+	$("#teleph1").mask("+380 (99) 99-99-999");
+	$("#teleph2").mask("+380 (99) 99-99-999");
+	$("#teleph3").mask("+380 (99) 99-99-999");
+	$("#teleph4").mask("+380 (99) 99-99-999");
+
+	var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazy"
+	});
+
+	var scene = document.getElementById('scene');
+	var parallaxInstance = new Parallax(scene, {
+		relativeInput: true,
+		clipRelativeInput: true,
+		hoverOnly: true,
+		scalarY: 25,
+		scalarX: 25,
+	});
+
+	var windowW = $(window).width();
+
+	if ($(window).width() > 1250) {
+		$(window).scroll(function () {
+			var sect = $('.comfort__container');
+			var block = parseInt(sect.offset().top) - 200;
+			var block2 = parseInt(sect.offset().top) + 300;
+			if (block < $(window).scrollTop()) {
+				var tops = parseInt($(window).scrollTop() - sect.offset().top);
+				tops += 150;
+				if (tops < sect.height() - $(".comfort__name").height()) {
+					$(".comfort__name").css("top", tops);
+				}
+			}
+		});
+	}
+
+	var windowWidth = $(window).width();
+
+	$(".open-tab").on("click", function (e) {
+		e.preventDefault();
+		var id = $(this).attr("href");
+		$(this).addClass("open-tab-active").siblings(".open-tab").removeClass("open-tab-active");
+		$(id).addClass("tab-active").siblings(".map-tab").removeClass("tab-active");
+	});
+
+	$('.to__top').on('click', function () {
+		$('html, body').animate({ scrollTop: 0 }, '300');
+	});
 
 });

@@ -203,6 +203,9 @@
 					<img class="banner-img2" src="img/top2.png" alt="">
 					<img class="banner-img3" src="img/top3.png" alt="">
 				</div>
+				<div class="banner-mob-fig">
+					<img src="img/top-img.png" alt="">
+				</div>
 				<div class="banner__text banner__text-mobile">
 					<span>Чеська якість - ваш затишок та комфорт</span>
 				</div>
@@ -482,36 +485,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 	<script>
-		var scene = document.getElementById('scene');
-		var parallaxInstance = new Parallax(scene, {
-			relativeInput: true,
-			clipRelativeInput: true,
-			hoverOnly: true,
-			scalarY: 25,
-			scalarX: 25,
-		});
+		
 	</script>
 
 	<script>
-		$(window).scroll(function () {
-			var sect = $('.scene__container');
-			var block = parseInt(sect.offset().top) - 200;
-			var block2 = parseInt(sect.offset().top) + 300;
-			if (block < $(window).scrollTop()) {
-				var tops = parseInt($(window).scrollTop() - sect.offset().top);
-				tops += 320;
-				if (tops < sect.height() - $(".scene__name").height()) {
-					$(".scene__name").css("top", tops);
-				}
-			}
-			if (block2 < $(window).scrollTop()) {
-				$('.scene-title1').removeClass('active');
-				$('.scene-title2').addClass('active');
-			} else {
-				$('.scene-title1').addClass('active');
-				$('.scene-title2').removeClass('active');
-			}
-		});
+		
 	</script>
 
 </body>

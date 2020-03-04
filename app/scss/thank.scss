@@ -1,0 +1,80 @@
+@import "vars";
+
+.thank__container{
+	background-image: url(../img/thank-bg.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	background-color: #DE4E45;
+}
+
+.thank-page{
+	margin-bottom: 40px;
+}
+
+.thank__content{
+	padding: 0 150px;
+	padding-top: 290px;
+	padding-bottom: 345px;
+}
+
+.thank__title{
+	margin-bottom: 98px;
+	span{
+		font-size: 36px;
+		font-weight: 700;
+		color: #ffffff;
+		line-height: 54px;
+	}
+}
+
+.thank__url{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	a{
+		background-color: #ffffff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		width: 218px;
+		height: 60px;
+		font-size: 18px;
+		font-weight: 500;
+		border-radius: 2px;
+		color: $main;
+		transition: all .3s ease;
+		cursor: pointer;
+	}
+}
+
+.thank__behind{
+	margin-right: 42px;
+	svg{
+		margin-right: 10px;
+		transition: all .3s ease;
+	}
+	&:hover{
+		outline: none;
+		text-decoration: none;
+		svg{
+			transform: translateX(-10px);
+		}
+	}
+}
+
+.thank__general{
+	svg{
+		margin-left: 10px;
+		transition: all .3s ease;
+	}
+	&:hover{
+		outline: none;
+		text-decoration: none;
+		svg{
+			transform: translateX(10px);
+		}
+	}
+}

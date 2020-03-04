@@ -165,6 +165,9 @@
 }
 
 @media(max-width: 1500px){
+    .toggle__hamburger{
+        right: 125px;
+    }
     .tab-bogemia__logo{
         transform: translateX(-77%);
         left: 50%;
@@ -211,18 +214,28 @@
     .about__descr{
         width: 50%;
     }
+    .banner__text{
+        width: 40%;
+        h1{
+            font-size: 38px;
+            line-height: 45px;
+        }
+    }
     .banner__figure{
+        top: 60%;
+        width: 1400px; /* 
         position: relative;
         width: 100%;
         transform: none;
         left: 0;
-        top: 0;
+        top: 0; */
     }
-    .banner__container{
+    .banner__container{/* 
         flex-direction: column;
-        align-items: flex-start;
-        padding-top: 50px;
-        height: auto;
+        align-items: flex-start; */
+        padding-top: 50px;/* 
+        height: auto; */
+        overflow-x: hidden;
     }
     .banner__text{
         h1{
@@ -230,32 +243,41 @@
         }
     }
     .banner__figure .banner-line2{
-        width: 365px;
-        right: -2.5%;
+        /* width: 365px;
+        right: -2.5%; */
+        width: 18%;
+        right: 9%;
     }
     .banner__figure .banner-line1{
-        left: -90px;
-        bottom: 225px;
+        /* left: -90px;
+        bottom: 225px; */
+        left: 150px;
+        bottom: 30%;
         width: 650px;
     }
     .banner__figure .banner-img1{
         width: 35%;
-        right: 33%;
+        /* right: 33%; */
+        right: 18%;
         top: -5%;
     }
     .banner__figure .banner-img2{
         width: 35%;
-        right: 20%;
+        /* right: 20%; */
+        right: 7%;
         top: 0;
     }
     .banner__figure .banner-img3{
-        right: 12%;
+        /* right: 12%; */
+        right: 2%;
         top: -5%;
         width: 35%;
     }
     .banner__figure .banner-line2{
-        width: 24.3%;
-        right: 18%;
+        /* width: 24.3%;
+        right: 18%; */
+        width: 18%;
+        right: 9%;
     }
 }
 
@@ -280,6 +302,14 @@
 }
 
 @media(max-width: 1400px){
+    .slider__item,
+    .slider__item2{
+        max-width: 400px;
+        width: 400px;
+        img{
+            width: 100%;
+        }
+    }
     .comfort__slider .slider__line{
         transform: translateX(70px);
     }
@@ -366,14 +396,27 @@
         }
     }
     .boiler__block{
-        margin-bottom: 150px;
+        margin-bottom: 200px;
+        margin-top: 150px;
     }
     .boilers__banner{
         margin-bottom: 100px;
     }
+    .boiler__block.boiler__mini{
+        .block__content{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }
 
 @media(max-width: 1350px){
+    .banner__figure{
+        left: -15%;
+    }
+    .banner__text{
+        width: 100%;
+    }
     .bogemia__info{
         padding: 0;
     }
@@ -491,6 +534,40 @@
 }
 
 @media(max-width: 1200px){
+    .banner__figure{
+        position: relative;
+        width: 100%;
+        transform: none;
+        left: 0;
+        top: 0; 
+    }
+    .banner__container{
+        flex-direction: column;
+    }
+    .banner__figure .banner-line1{
+        left: -90px;
+        bottom: 225px;
+        width: 650px;
+    }
+    .banner__figure .banner-img1{
+        width: 35%;
+        right: 33%;
+        top: -5%;
+    }
+    .banner__figure .banner-img2{
+        width: 35%;
+        right: 20%;
+        top: 0;
+    }
+    .banner__figure .banner-img3{
+        right: 12%;
+        top: -5%;
+        width: 35%;
+    }
+    .banner__figure .banner-line2{
+        width: 24.3%;
+        right: 18%;
+    }
     .vega-about2 .vega-about__container .about__descr{
         padding-left: 0;
     }
@@ -621,11 +698,6 @@
     .delivery__container{
         padding-right: 80px;
 
-    }
-    .delivery__descr span{
-        br{
-            display: none;
-        }
     }
     .delivery__thumb .truck.truck-active{
         transform: translateX(30px);
@@ -834,6 +906,12 @@
     }
     .boiler__block{
         margin-bottom: 1px;
+    }
+    .boiler__block.boiler__mini{
+        margin-top: 0;
+        .block__content{
+            justify-content: center;
+        }
     }
     .block__content{
         justify-content: flex-start;
@@ -1071,6 +1149,16 @@
 }
 
 @media(max-width: 800px){
+    .banner__figure{
+        display: none;
+    }
+    .banner-mob-fig{
+        display: block;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
     .toggle__nav-link.link-active{
         &:before{
             width: 50px;
@@ -1195,16 +1283,12 @@
             justify-content: center;
             align-items: center;
             border-radius: 2px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 500;
-            color: $gray;
-            background-color: #fff;
             text-decoration: none;
             transition: all .3s ease;
             &:hover{
-                color: #ffffff;
                 text-decoration: none;
-                background-color: $main;
             }
         }
     }
@@ -1647,7 +1731,9 @@
     }
     .banner__container{
         padding-left: 25px;
-        padding-top: 67px;
+        padding-top: 55px;
+        height: 100vh;
+        overflow: hidden;
     }
     .banner__figure .banner-line1{
         bottom: 140px;
@@ -2259,6 +2345,11 @@
 }
 
 @media(max-width: 400px){
+    .banner__text{
+        h1{
+            padding-right: 25px;
+        }
+    }
     .delivery__thumb .truck{
         width: 137%;
     }
